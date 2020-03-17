@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/plus-one/
+// https://leetcode.com/problems/plus-one
 
 export function plusOne(digits: number[]): number[] {
   const r = [];
