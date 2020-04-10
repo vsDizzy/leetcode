@@ -1,5 +1,7 @@
 {
   "root": true,
+  "env": { "node": true },
+  "ignorePatterns": ["node_modules"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": { "project": "tsconfig.json" },
   "plugins": ["@typescript-eslint"],
@@ -8,7 +10,13 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
     "prettier/@typescript-eslint"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "warn",
+      { "accessibility": "no-public" }
+    ]
+  }
 }
